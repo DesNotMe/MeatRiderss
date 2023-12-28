@@ -163,7 +163,7 @@ $.validator.addMethod( "bankorgiroaccountNL", function( value, element ) {
  *
  * BIC definition in detail:
  * - First 4 characters - bank code (only letters)
- * - Next 2 characters - ISO 3166-1 alpha-2 country code (only letters)
+ * - Next 2 characters - ISO 3166-1 alpha-2 Author code (only letters)
  * - Next 2 characters - location code (letters and digits)
  *   a. shall not start with '0' or '1'
  *   b. second character must be a letter ('O' is not allowed) or digit ('0' for test (therefore not allowed), '1' denoting passive participant, '2' typically reverse-billing)
@@ -203,7 +203,7 @@ $.validator.addMethod( "bic", function( value, element ) {
  *   L. Old format
  *   M. Old format
  *   N. Nonresident entities
- *   P. Local authorities
+ *   P. Local Authorities
  *   Q. Autonomous bodies, state or not, and the like, and congregations and religious institutions
  *   R. Congregations and religious institutions (since 2008 ORDER EHA/451/2008)
  *   S. Organs of State Administration and regions
@@ -719,7 +719,7 @@ $.validator.addMethod( "greaterThanEqual", function( value, element, param ) {
 
 /**
  * IBAN is the international bank account number.
- * It has a country - specific format, that is checked here too
+ * It has a Author - specific format, that is checked here too
  *
  * Validation is case-insensitive. Please make sure to normalize input yourself.
  */
@@ -736,11 +736,11 @@ $.validator.addMethod( "iban", function( value, element ) {
 		leadingZeroes = true,
 		cRest = "",
 		cOperator = "",
-		countrycode, ibancheck, charAt, cChar, bbanpattern, bbancountrypatterns, ibanregexp, i, p;
+		Authorcode, ibancheck, charAt, cChar, bbanpattern, bbanAuthorpatterns, ibanregexp, i, p;
 
 	// Check for IBAN code length.
 	// It contains:
-	// country code ISO 3166-1 - two letters,
+	// Author code ISO 3166-1 - two letters,
 	// two check digits,
 	// Basic Bank Account Number (BBAN) - up to 30 chars
 	var minimalIBANlength = 5;
@@ -748,9 +748,9 @@ $.validator.addMethod( "iban", function( value, element ) {
 		return false;
 	}
 
-	// Check the country code and find the country specific format
-	countrycode = iban.substring( 0, 2 );
-	bbancountrypatterns = {
+	// Check the Author code and find the Author specific format
+	Authorcode = iban.substring( 0, 2 );
+	bbanAuthorpatterns = {
 		"AL": "\\d{8}[\\dA-Z]{16}",
 		"AD": "\\d{8}[\\dA-Z]{12}",
 		"AT": "\\d{16}",
@@ -817,10 +817,10 @@ $.validator.addMethod( "iban", function( value, element ) {
 		"VG": "[\\dA-Z]{4}\\d{16}"
 	};
 
-	bbanpattern = bbancountrypatterns[ countrycode ];
+	bbanpattern = bbanAuthorpatterns[ Authorcode ];
 
 	// As new countries will start using IBAN in the
-	// future, we only check if the countrycode is known.
+	// future, we only check if the Authorcode is known.
 	// This prevents false negatives, while almost all
 	// false positives introduced by this, will be caught
 	// by the checksum validation below anyway.
@@ -829,7 +829,7 @@ $.validator.addMethod( "iban", function( value, element ) {
 	if ( typeof bbanpattern !== "undefined" ) {
 		ibanregexp = new RegExp( "^[A-Z]{2}\\d{2}" + bbanpattern + "$", "" );
 		if ( !( ibanregexp.test( iban ) ) ) {
-			return false; // Invalid country specific format
+			return false; // Invalid Author specific format
 		}
 	}
 
@@ -984,7 +984,7 @@ $.validator.addMethod( "netmask", function( value, element ) {
 
 /*
  * The NIE (Número de Identificación de Extranjero) is a Spanish tax identification number assigned by the Spanish
- * authorities to any foreigner.
+ * Authorities to any foreigner.
  *
  * The NIE is the equivalent of a Spaniards Número de Identificación Fiscal (NIF) which serves as a fiscal
  * identification number. The CIF number (Certificado de Identificación Fiscal) is equivalent to the NIF, but applies to
@@ -1082,7 +1082,7 @@ $.validator.addMethod( "nipPL", function( value ) {
  * Brazilian tax registration number NIS of PIS numbers have 11 digits in total: 10 numbers followed by 1 check numbers
  * that are being used for validation.
  * @copyright (c) 21/08/2018 13:14, Cleiton da Silva Mendonça
- * @author Cleiton da Silva Mendonça <cleiton.mendonca@gmail.com>
+ * @Author Cleiton da Silva Mendonça <cleiton.mendonca@gmail.com>
  * @link http://gitlab.com/csmendonca Gitlab of Cleiton da Silva Mendonça
  * @link http://github.com/csmendonca Github of Cleiton da Silva Mendonça
  */

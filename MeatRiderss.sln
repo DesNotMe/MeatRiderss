@@ -5,11 +5,11 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeatRiderss", "MeatRiderss.csproj", "{5F97F898-D15F-4BEC-83DB-72D063BC4367}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeatRiderss.Models", "..\MeatRiderss.Migrations\MeatRiderss.Models.csproj", "{343C8178-445D-4648-808D-FBB7916509B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeatRiderss.Models", "..\MeatRiderss.Migrations\MeatRiderss.Models.csproj", "{343C8178-445D-4648-808D-FBB7916509B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeatRiders.Utility", "..\MeatRiders.Utility\MeatRiders.Utility.csproj", "{06245EB9-B07D-473A-8B6F-1175C2F8CB93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeatRiderss.DataAccess", "..\MeatRiders.DataAccess\MeatRiderss.DataAccess.csproj", "{18223DB1-F576-4EAE-BE73-D01FC929F13F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeatRiders.DataAccess", "..\MeatRiders.DataAccess\MeatRiders.DataAccess.csproj", "{18223DB1-F576-4EAE-BE73-D01FC929F13F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeatRiderss.Utility", "..\MeatRiderss.Utility\MeatRiderss.Utility.csproj", "{4A2FFB00-A8A2-493B-9AFB-4B4502070544}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{343C8178-445D-4648-808D-FBB7916509B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{343C8178-445D-4648-808D-FBB7916509B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{343C8178-445D-4648-808D-FBB7916509B4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{06245EB9-B07D-473A-8B6F-1175C2F8CB93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{06245EB9-B07D-473A-8B6F-1175C2F8CB93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{06245EB9-B07D-473A-8B6F-1175C2F8CB93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{06245EB9-B07D-473A-8B6F-1175C2F8CB93}.Release|Any CPU.Build.0 = Release|Any CPU
 		{18223DB1-F576-4EAE-BE73-D01FC929F13F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{18223DB1-F576-4EAE-BE73-D01FC929F13F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18223DB1-F576-4EAE-BE73-D01FC929F13F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18223DB1-F576-4EAE-BE73-D01FC929F13F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A2FFB00-A8A2-493B-9AFB-4B4502070544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A2FFB00-A8A2-493B-9AFB-4B4502070544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A2FFB00-A8A2-493B-9AFB-4B4502070544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A2FFB00-A8A2-493B-9AFB-4B4502070544}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
